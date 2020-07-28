@@ -1,0 +1,128 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>회원가입 폼</title>
+</head>
+
+<body bgcolor='#CAC3B2'>
+
+  <audio src="aoisan.mp3" loop autoplay="autoplay" controls="controls" muted>
+  </audio>
+
+  <form name="input" method="post" action="">
+    <table border="1" weigth="600" align="center" cellspacing="0">
+      <tr>
+        <th colspan="5" weight="600" align="center" bgcolor="#99B6BD"><span id="star"></span>회원 기본 정보</th>
+      </tr>
+      <tr weight="800">
+        <td align="center"><b><span id="star">* </span>아이디:<b></td>
+        <td colspan="5">
+
+          <input type="text" id="id" value="" size="20" maxlength="15" required />
+          4~12자의 영문 대소문자와 숫자로만 입력
+        </td>
+      </tr>
+      <tr>
+        <td align="center"><b><span id="star">* </span>비밀번호:<b></td>
+        <td colspan="5">
+          <input type="password" id="pw" value="" size="20" onblur="checkPw()" required />
+          4~12자의 영문 대소문자와 숫자로만 입력
+        </td>
+      </tr>
+      <tr>
+        <td align="center"><b style=" font-size:10pt"><span id="star">* </span>비밀번호확인:<b></td>
+        <td colspan="5">
+          <input type="password" id="repw" value="" size="20" required />
+
+        </td>
+      </tr>
+      <tr>
+        <td align="center"><span style="font-weight:bold"><span id="star">* </span>메일주소: </td>
+        <td colspan="5">
+          <input type="text" id="mail" value="" size="30" required />
+          예) id@domain.com
+        </td>
+      </tr>
+      <tr>
+        <td align="center"><b><span id="star">* </span>이름: </b></td>
+        <td colspan="5">
+          <input type="text" id="name" value="" size="30" required />
+        </td>
+      </tr>
+      <tr>
+        <th align="center" colspan="5" bgcolor="#D4613E">개인 신상 정보</th>
+      </tr>
+      <tr>
+        <td align="center"><b><span id="star">* </span>주민등록번호 :<b></td>
+        <td colspan="5">
+          <input type="text" id="id_num_1" value="" maxlength="6" size="8" required /> -</input>
+          <input type="password" id="id_num_2" value="" maxlength="7" size="8" required /></input>
+
+          예) 123456-1234567
+        </td>
+      </tr>
+      <tr>
+        <td align="center"><b>생일 :<b></td>
+        <td colsapn="5">
+        <td>
+          <input type="text" style="width:80px" id="years" readonly />년
+          <select id="month" name="month" style="width:50px">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>월
+
+          <select id="day" name="day" style="width:50px">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+
+          </select>일
+
+
+        </td>
+
+      <tr>
+        <td align="center"><b>관심분야:</b></td>
+        <td colspan="5">
+          <input type="checkbox" name="favorite" value="컴퓨터">컴퓨터
+          <input type="checkbox" name="favorite" value="인터넷">인터넷
+          <input type="checkbox" name="favorite" value="여행">여행
+          <input type="checkbox" name="favorite" value="영화감상">영화감상
+          <input type="checkbox" name="favorite" value="음악감상">음악감상
+        </td>
+      </tr>
+      <tr rowspan="5">
+        <td align="center"><b>자기소개:<b></td>
+        <td colspan="5">
+          <textarea name="introdutcion" rows="5" cols="55"></textarea></td>
+      </tr>
+    </table>
+    <br>
+    <center>
+      <input type="submit" name="join" value="회원 가입" align="middle">
+      <input type="reset" name="reset" value="다시 입력" align="center">
+  </form>
+  </center>
+</body>
+
+</html>
