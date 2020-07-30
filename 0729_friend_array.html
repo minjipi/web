@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <title>String 객체로 문자열 검색하기</title>
+  <script language="javascript">
+    function makeFriends() {
+      var myFriends = window.prompt("친구가 몇 명?", "");
+
+      for (var i = 0; i < parseInt(myFriends); i++) {
+        var textBox = document.createElement("input");
+        var newLine = document.createElement("br");
+        textBox.type = "Text"
+
+        document.body.appendChild(textBox);
+        document.body.appendChild(newLine);
+      }
+    }
+  </script>
+</head>
+
+<body onload="makeFriends()">
+  <h2> 내 친구 나열하기</h2>
+
+</body>
+
+</html>

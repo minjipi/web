@@ -1,0 +1,22 @@
+<DOCTYPE html>
+  <html>
+     <head>
+        <title>이미지</title>
+        <script language="javascript">
+           var imgArray = new Array();
+           imgArray[0]="00.jpg";
+           imgArray[1]="01.png";
+           imgArray[2]="02.png";
+
+           function showImage() {
+             var imgNum=Math.round(Math.random()*3);
+             var objImg = document.getElementById("introImg");
+             objImg.src=imgArray[imgNum];
+           }
+
+        </script>
+     </head>
+     <body onload="showImage()">
+        <img id="introImg" border="0">
+     </body>
+  </html>

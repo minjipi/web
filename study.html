@@ -1,0 +1,95 @@
+<DOCTYPE html>
+  <html>
+
+  <head>
+    <title>폰트 바꾸기</title>
+
+    <script language="javascript">
+      function font() {
+        var i1 = document.getElementById("items1");
+        var i2 = document.getElementById("items2");
+        var i1_v = i1.value;
+        var i2_v = i2.value;
+        var inp = document.getElementById("input");
+        var f = document.getElementsByName("feature");
+        var ans = document.getElementById("txt");
+        var inpv = inp.value;
+        if (i1_v == "red") {
+          inpv = inpv.fontcolor("red");
+        } else if (i1_v == "green") {
+          inpv = inpv.fontcolor("green");
+        } else if (i1_v == "blue") {
+          inpv = inpv.fontcolor("blue");
+        }
+
+        inpv = inpv.fontsize(i2_v);
+
+        if (f[0].checked) {
+          inpv = inpv.strike()
+        }
+        if (f[1].checked) {
+          inpv = inpv.big()
+        }
+        if (f[2].checked) {
+          inpv = inpv.small()
+        }
+        if (f[3].checked) {
+          inpv = inpv.bold()
+        }
+        if (f[4].checked) {
+          inpv = inpv.italics()
+        }
+        if (f[5].checked) {
+          inpv = inpv.sup()
+        }
+        if (f[6].checked) {
+          inpv = inpv.sub()
+        }
+        if (f[7].checked) {
+          inpv = inpv.toLowerCase()
+        }
+        if (f[8].checked) {
+          inpv = inpv.toUpperCase()
+        }
+        ans.innerHTML = inpv;
+
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <input type="text" id="input">
+    <input type="button" value="미리 보기" onclick="font()">
+    <br>색상:
+    <select id="items1">
+      <option value="red">빨강</option>
+      <option value="green">초록</option>
+      <option value="blue">파랑</option>
+    </select>
+    <br>크기:
+    <select id="items2">
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+      <option value=5>5</option>
+      <option value=6>6</option>
+      <option value=7>7</option>
+    </select>
+    <br>
+    <input type="checkbox" name="feature" value="취소선">취소선
+    <input type="checkbox" name="feature" value="크게">크게
+    <input type="checkbox" name="feature" value="작게">작게
+    <input type="checkbox" name="feature" value="두껍게">두껍게
+    <input type="checkbox" name="feature" value="기울임">기울임<br>
+    <input type="checkbox" name="feature" value="위첨자">위첨자
+    <input type="checkbox" name="feature" value="아래첨자">아래첨자
+    <input type="checkbox" name="feature" value="소문자로">소문자로
+    <input type="checkbox" name="feature" value="대문자로">대문자로
+    <br>
+    <span id="txt"></span>
+
+  </body>
+
+  </html>

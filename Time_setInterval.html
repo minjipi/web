@@ -1,0 +1,22 @@
+<DOCTYPE html>
+  <html>
+
+  <head>
+    <title>Document</title>
+    <script>
+      var timer = setInterval(currentTime, 1000);
+
+      function currentTime() {
+        var d = new Date();
+        var t = "현재시간은... ";
+        document.getElementById("currentTime").innerHTML = t + d.toLocaleTimeString();
+      }
+    </script>
+  </head>
+
+  <body>
+    <br><br>
+    <h2 id="currentTime" style="text-align:center"color:black;">잠시만요..</h1>
+  </body>
+
+  </html>

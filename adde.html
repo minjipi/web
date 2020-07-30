@@ -1,0 +1,108 @@
+<DOCTYPE html>
+  <html>
+
+  <head>
+
+    <title>new_회원가입 만들기</title>
+    <link rel="stylesheet" type="text/css" href="join_form_css.css" />
+    <script src="join_form_js.js">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script> // jquery로 주소를 받아오는 api를 받아온다.
+
+      //js파일 연동
+
+  </head>
+
+  <body>
+  
+    <form class="" action="https://blog.naver.com/dptmf4676" method="post" onsubmit="return checkAll()">
+      //submit시에 블로그로 이동하게 설정
+      <table border="1" weigth="600" align="center" cellspacing="0">
+        <tr>
+          <th colspan="5" weight="600" align="center" bgcolor="#CEE3F6"><span id="star">(*필수입력) </span>회원 기본 정보</th>
+        </tr>
+        <tr weight="800">
+          <td align="center"><b><span id="star">* </span>아이디:<b></td>
+          <td colspan="5">
+            <input type="text" onfocus="this.value=''" id="id" value="4~12자의 영문 대소문자,숫자만 입력" size="30" maxlength="15" required />
+            <input type="button" name="" value="아이디 검사" onclick="checkID()">
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><b><span id="star">* </span>비밀번호:<b></td>
+          <td colspan="5">
+            <input type="password" id="pw" value="" size="20" onblur="checkPw()" required />
+            4~12자의 영문 대소문자와 숫자로만 입력
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><b style=" font-size:10pt"><span id="star">* </span>비밀번호확인:<b></td>
+          <td colspan="5">
+            <input type="password" id="repw" value="" size="20" required />
+            <input type="button" name="" value="비밀번호 확인" onclick="checkRePw()">
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><span style="font-weight:bold"><span id="star">* </span>메일주소: </td>
+          <td colspan="5">
+            <input type="text" id="mail" value="" size="30" required />
+            <input type="button" name="" value="메일 확인" onclick="checkMail()">
+            예) id@domain.com
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><b><span id="star">* </span>이름: </b></td>
+          <td colspan="5">
+            <input type="text" id="name" value="" size="30" required />
+          </td>
+        </tr>
+        <tr>
+          <th align="center" colspan="5" bgcolor="#CEE3F6">개인 신상 정보</th>
+        </tr>
+        <tr>
+          <td align="center"><b><span id="star">* </span>주민등록번호 :<b></td>
+          <td colspan="5">
+            <input type="text" id="id_num_1" value="" maxlength="6" size="8" required /> -</input>
+            <input type="password" id="id_num_2" value="" maxlength="7" size="8" required /></input>
+            <input type="button" name="" value="확인" onclick="checkNum()">
+            예) 123456-1234567
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><b>생일 :<b></td>
+          <td colsapn="5">
+          <td>
+            <input type="text" style="width:80px" id="years" readonly />년
+            <input type="text" style="width:50px" id="month" readonly />월
+            <input type="text" style="width:50px" id="day" readonly />일
+          </td>
+        <tr rowspan="3">
+          <td align="center"><b>주소 :</b></td>
+          <td colspan="5">
+            <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+            <input type="text" name="zip" style="width:80px; height:20px;" />
+            <button type="button" style="width:100px; height:26px;" onclick="openZipSearch()">우편번호 찾기</button><br>
+            <input type="text" name="addr1" style="width:200px; height:20px;" readonly />
+            <input type="text" name="addr2" style="width:200px; height:20px;" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><b>관심분야:</b></td>
+          <td colspan="5">
+            <input type="checkbox" name="favorite" value="컴퓨터">컴퓨터
+            <input type="checkbox" name="favorite" value="인터넷">인터넷
+            <input type="checkbox" name="favorite" value="여행">여행
+            <input type="checkbox" name="favorite" value="영화감상">영화감상
+            <input type="checkbox" name="favorite" value="음악감상">음악감상
+          </td>
+        </tr>
+        <tr rowspan="5">
+          <td align="center"><b>자기소개:<b></td>
+          <td colspan="5">
+            <textarea name="introdutcion" rows="5" cols="55"></textarea></td>
+        </tr>
+      </table>
+      <br>
+      <center>
+        <input type="submit" name="join" value="회원 가입" align="middle">
+        <input type="reset" name="reset" value="다시 입력" align="center">
+      </center>

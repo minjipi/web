@@ -1,0 +1,48 @@
+
+#minjicss {
+  color: red;
+  font-size: 12px;
+  font-style: bold;
+}
+
+#years {
+  border: white;
+  background-color: white;
+}
+
+#month {
+  border: white;
+  background-color: white;
+}
+
+#day {
+  border: white;
+  background-color: white;
+}
+
+#basic {
+  color: black;
+}
+
+#basic1 {
+  color: white;
+}
+
+#id {
+  color: gray;
+  font-size: 11px;
+}
+
+#pww {
+  color: balck;
+  font-size: 11px;
+}
+
+#pwww {
+  color: white;
+}
+
+#Btn {
+  background-color: D09E88;
+  font-size: 10px;
+}

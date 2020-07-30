@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> 배열 </title>
+  <script src="array_jquery.js"></script>
+  <style>
+
+  </style>
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+  <h3>[ 배열저장 ]</h3><br>
+  <table class="center">
+    <tr>
+    <tr>
+      <td=style="center">
+        <input type="text" id="item" onkeypress="inNumber();" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" />
+        <input type="button" value="배열에 추가하기" style="background-color:''; padding: 1px 28px;" onclick="Push()">
+        <input type="button" value="무효화 버튼" onclick="deactivate()">
+        </td><br>
+    </tr>
+    <br>
+    <td>
+      <tr>
+        현재 배열의 값:
+        <span id="result" style="-webkit-text-stroke-width:medium" </span>
+      </tr><br><br>
+
+
+    </td>
+    <tr>
+      <td>
+        <input type="button" id="bnt" value="Shift" onclick="do_Shft()" style="background-color:antiquewhite; padding: 12px 40px;">
+
+        <input type="button" id="bnt" value="Pop" onclick="do_p()" style="background-color:yellowgreen; padding: 12px 40px;">
+
+        <input type="button" id="bnt" value="Reverse" onclick="do_re()" style="background-color:cadetblue; padding: 12px 40px;">
+        <input type="button" id="bnt" value="Sort" onclick="do_sort()" style="background-color:skyblue; padding: 12px 40px;">
+      </td>
+    </tr>
+    </tr>
+  </table>
+
+</body>
+
+</html>
